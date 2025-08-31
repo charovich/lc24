@@ -73,10 +73,10 @@ gpy-run() {
             env SDL_VIDEODRIVER=no lc24 progs/compiled/$module.bin || crash $?
             ;;
         gui)
-            lc24 progs/compiled/$module.bin || crash $?
+            $LOST/lc24 progs/compiled/$module.bin || crash $?
             ;;
         bench)
-#             time printf "help\ndir\nfib\n27\nexit\n" | env SDL_VIDEODRIVER=no lc24 progs/compiled/$module.bin
+#             time printf "help\ndir\nfib\n27\nexit\n" | env SDL_VIDEODRIVER=no $LOST/lc24 progs/compiled/$module.bin
             ;;
     esac
 }
